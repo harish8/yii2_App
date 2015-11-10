@@ -11,7 +11,7 @@ $this->title = 'My Web';
 
         <p class="lead">I am Harish. Welcome to My Web. Work in progress bringing something cool. !!! </p>
 
-        <p><a class="btn btn-lg btn-success" href="www.harish8.com"> know more about me </a></p>
+        <p><a class="btn btn-lg btn-success" href="http://www.harish8.com"> know more about me </a></p>
     </div>
 
  <!--   <div class="body-content">
