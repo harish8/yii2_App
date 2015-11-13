@@ -14,7 +14,7 @@ class Status extends Model{
 
     public function rules(){
         return[
-            [['text','permissions'],required],
+            [['text','permissions'],'required'],
         ];
 
     }
