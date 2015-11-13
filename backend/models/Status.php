@@ -21,11 +21,18 @@ class Status extends Model{
 
     public function getPermissions(){
 
+        return array(self::PERMISSIONS_PRIVATE=>'private',self::PERMISSIONS_PUBLIC=>'public');
 
     }
 
-    public function getPermissionsLabel(){
+    public function getPermissionsLabel($permissions){
 
+        if($permissions==self::PERMISSIONS_PUBLIC){
+            return 'Public';
+        }
+        else {
+            return 'Private';
+        }
 
     }
 }
