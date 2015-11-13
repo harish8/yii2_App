@@ -11,7 +11,7 @@ use backend\models\Status;
 ?>
 <?php $form = ActiveForm::begin()?>
 
-<?= $form->field($model,'text')->textarea(['rows'=>'4'])->label('Status Update');?>
+<?= $form->field($model,'text')->textarea(['rows'=>'4'])/*->textInput(array('placeholder'=>'Write your Status','rows'=>'4'))*/->label('Status Update');?>
 
 <?= $form->field($model,'permissions')->dropDownList($model->getPermissions(),
     ['prompt' => '-Choose your permissions-']
