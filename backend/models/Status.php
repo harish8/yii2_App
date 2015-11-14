@@ -15,6 +15,8 @@ use Yii;
  */
 class Status extends \yii\db\ActiveRecord
 {
+    const PERMISSION_PRIVATE = 10;
+    const PERMISSION_PUBLIC = 20;
     /**
      * @inheritdoc
      */
@@ -47,5 +49,25 @@ class Status extends \yii\db\ActiveRecord
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
         ];
+    }
+
+    /**
+     * @return array
+     */
+    public function getPermission(){
+
+        return array(self::PERMISSION_PRIVATE=>'Private',self::PERMISSION_PUBLIC=>'Public');
+
+    }
+
+    public function getPermissionLabel($permissions){
+
+        if($permissions==self::PERMISSION_PUBLIC){
+            return 'Public';
+        }
+        else{
+            return 'Private';
+        }
+
     }
 }
